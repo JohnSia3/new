@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Ordering System</title>
+<script type="text/javascript">
+  function addNumber() {
+
+            var first_number = parseInt(document.getElementById("p1").value);
+            var second_number = parseInt(document.getElementById("q1").value);
+            var result1 = first_number * second_number;
+
+            document.getElementById("t1").value = result1;
+
+            var first_number = parseInt(document.getElementById("p2").value);
+            var second_number = parseInt(document.getElementById("q2").value);
+            var result2 = first_number * second_number;
+
+            document.getElementById("t2").value = result2;
+
+            var first_number = parseInt(document.getElementById("p3").value);
+            var second_number = parseInt(document.getElementById("q3").value);
+            var result3 = first_number * second_number;
+
+            document.getElementById("t3").value = result3;
+
+            var first_number = parseInt(document.getElementById("p4").value);
+            var second_number = parseInt(document.getElementById("q4").value);
+            var result4 = first_number * second_number;
+
+            document.getElementById("t4").value = result4;
+
+            var first_number = parseInt(document.getElementById("p5").value);
+            var second_number = parseInt(document.getElementById("q5").value);
+            var result5 = first_number * second_number;
+
+            document.getElementById("t5").value = result5;
+
+            var result6 = result1 + result2 + result3 + result4 + result5;
+
+            document.getElementById("t6").value = result6;
+        }
+
+</script>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;   
+}
+th{
+	padding: 5px;
+	font-weight: bold;
+}
+table {
+    border-spacing: 15px;
+}
+#blu {
+	background-color: skyblue;
+}
+tr:hover {
+	background-color: yellow;
+}
+
+.totalcolumn {
+	background-color: silver;
+}
+input {
+	margin: 3px;
+}
+
+input[type=number] {
+	text-align: right
+}
+#d {
+	padding: 5px;
+}
+</style>
+</head>
+<body>
+<form action="/action_page.php">
+	<h1>Book Ordering System</h1>
+	<table style="max-width:100%">
+  <tr id="blu">
+    <th style="padding: 5px">No.</th>
+    <th style="text-align: left">Book Title</th> 
+    <th style="text-align: left">Author</th>
+    <th style="text-align: left">Category</th>
+    <th style="text-align: right">Unit Price</th>
+    <th style="text-align: right">Quantity</th>
+    <th style="text-align: right">Total</th>
+  </tr>
+  <tr>
+    <td style="text-align: right">1</td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><select name="category" >
+    <option value="cat">Please choose the category...</option>
+    <option value="bus">Business</option>
+    <option value="fic">Fiction</option>
+    <option value="math">Mathematics</option>
+    <option value="tech">Technology</option>
+  </select></td>
+    <td><input type="number" id="p1" name="quantity" value="0.00"></td>
+    <td><input type="number" id="q1" name="quantity" value="0"></td>
+    <td><input class="totalcolumn" type="number" id="t1" name="quantity" value="0.00"></td>
+  </tr>
+  <tr>
+    <td style="text-align: right">2</td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><select name="category" >
+    <option value="cat">Please choose the category...</option>
+    <option value="bus">Business</option>
+    <option value="fic">Fiction</option>
+    <option value="math">Mathematics</option>
+    <option value="tech">Technology</option>
+  </select></td>
+    <td><input type="number" id="p2" name="quantity" value="0.00"></td>
+    <td><input type="number" id="q2" name="quantity" value="0"></td>
+    <td><input class="totalcolumn" type="number" id="t2"name="quantity" value="0.00"></td>
+  </tr>
+  <tr>
+    <td style="text-align: right">3</td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><select name="category" >
+    <option value="cat">Please choose the category...</option>
+    <option value="bus">Business</option>
+    <option value="fic">Fiction</option>
+    <option value="math">Mathematics</option>
+    <option value="tech">Technology</option>
+  </select></td>
+    <td><input type="number" id="p3" name="quantity" value="0.00"></td>
+    <td><input type="number" id="q3" name="quantity" value="0"></td>
+    <td><input class="totalcolumn" type="number" id="t3" name="quantity" value="0.00"></td>
+  </tr>
+  <tr>
+    <td style="text-align: right">4</td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><select name="category" >
+    <option value="cat">Please choose the category...</option>
+    <option value="bus">Business</option>
+    <option value="fic">Fiction</option>
+    <option value="math">Mathematics</option>
+    <option value="tech">Technology</option>
+  </select></td>
+    <td><input type="number" id="p4" name="quantity" value="0.00"></td>
+    <td><input type="number" id="q4"name="quantity" value="0"></td>
+    <td><input class="totalcolumn" type="number" id="t4" name="quantity" value="0.00"></td>
+  </tr>
+  <tr>
+    <td style="text-align: right">5</td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><select name="category" >
+    <option value="cat">Please choose the category...</option>
+    <option value="bus">Business</option>
+    <option value="fic">Fiction</option>
+    <option value="math">Mathematics</option>
+    <option value="tech">Technology</option>
+  </select></td>
+    <td><input type="number" name="quantity" id="p5" value="0.00"></td>
+    <td><input type="number" name="quantity" id="q5" value="0"></td>
+    <td><input class="totalcolumn" type="number" name="quantity" id="t5" value="0.00"></td>
+  </tr>
+  <tr id="blu" style="height: 30px">
+    <td id="d"colspan="5" style="text-align: right" ><input id="totalcolumn" type="button" value="Calculate Grand Total Price" onclick="addNumber()"</td>
+    <td colspan="2" style="text-align:right"><input class="totalcolumn" style="font-size: 18pt" type="number" id="t6"name="quantity"></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
